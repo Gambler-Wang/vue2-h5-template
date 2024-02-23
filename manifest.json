@@ -1,0 +1,151 @@
+{
+	"name": "template",
+	"appid": "__UNI__C0EADC1",
+	"description": "template",
+	"versionName": "1.1.4",
+	"versionCode": 1140,
+	"transformPx": false,
+	/* 5+App特有相关 */
+	"app-plus": {
+		"runmode": "liberate",
+		"safearea": {
+			"bottom": {
+				"offset": "none"
+			}
+		},
+		"usingComponents": true,
+		"nvueCompiler": "uni-app",
+		"compilerVersion": 3,
+		"compatible": {
+			"ignoreVersion": true
+		},
+		"splashscreen": {
+			"alwaysShowBeforeRender": true,
+			"waiting": false,
+			"autoclose": true,
+			"delay": 0
+		},
+		/* 模块配置 */
+		"modules": {
+			"Geolocation": {},
+			"Maps": {},
+			"VideoPlayer": {},
+			"Bluetooth": {}
+		},
+		/* 应用发布信息 */
+		"distribute": {
+			/* android打包配置 */
+			"android": {
+				"permissions": [
+					"<uses-feature android:name=\"android.hardware.camera\"/>",
+					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
+					"<uses-permission android:name=\"android.permission.CAPTURE_SECURE_VIDEO_OUTPUT\"/>",
+					"<uses-permission android:name=\"android.permission.CAPTURE_VIDEO_OUTPUT\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+					"<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
+					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+					"<uses-permission android:name=\"android.permission.WRITE_SMS\"/>"
+				],
+				"autoSdkPermissions": true,
+				"schemes": "webappxhx"
+			},
+			/* ios打包配置 */
+			"ios": {},
+			/* SDK配置 */
+			"sdkConfigs": {
+				"ad": {},
+				"geolocation": {
+					"amap": {
+						"__platform__": ["android"],
+						"appkey_ios": "",
+						"appkey_android": "dbe14df05dba3ef820a3f655628bc269"
+					}
+				},
+				"maps": {
+					"amap": {
+						"appkey_ios": "dbe14df05dba3ef820a3f655628bc269",
+						"appkey_android": "dbe14df05dba3ef820a3f655628bc269"
+					}
+				}
+			},
+			"splashscreen": {
+				"useOriginalMsgbox": true,
+				"androidStyle": "default",
+				"android": {
+					"xxhdpi": "E:/Items/rk2102/rocpower/startupImg.png",
+					"xhdpi": "E:/Items/rk2102/rocpower/startupImg.png",
+					"hdpi": "E:/Items/rk2102/rocpower/startupImg.png"
+				}
+			}
+		},
+		"nativePlugins": {}
+	},
+	/* 快应用特有相关 */
+	"quickapp": {},
+	/* 小程序特有相关 */
+	"mp-weixin": {
+		"appid": "wxdad4f224bb8d79c0",
+		"setting": {
+			"urlCheck": false
+		},
+		"usingComponents": true,
+		"lazyCodeLoading": "requiredComponents"
+	},
+	"mp-alipay": {
+		"usingComponents": true,
+		"component2": true
+	},
+	"mp-qq": {
+		"optimization": {
+			"subPackages": true
+		},
+		"appid": ""
+	},
+	"mp-baidu": {
+		"usingComponents": true,
+		"appid": ""
+	},
+	"mp-toutiao": {
+		"usingComponents": true,
+		"appid": ""
+	},
+	"h5": {
+		"template": "template.h5.html",
+		"router": {
+			"mode": "hash"
+		},
+		"devServer": {
+			"https": false,
+			"port": 8080,
+			"disableHostCheck": true,
+			"proxy": {
+				"^/posts": {
+					"target": "http://jsonplaceholder.typicode.com", //目标接口域名
+					"changeOrigin": true, //是跨域
+					"secure": false, //设置支持https协议的代理
+					"pathRewrite": {
+						"/posts": "/posts"
+					}
+				}
+			}
+		}
+	}
+}
